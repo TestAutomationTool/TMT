@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDefinition>
+	<Metric ID="3001">
+		<MetricName>MIN_L_RXPOWER</MetricName>
+	</Metric>
+	<Metric ID="3002">
+		<MetricName>MAX_L_RXPOWER</MetricName>
+	</Metric>
+	<Metric ID="3003">
+		<MetricName>AVG_L_RXPOWER</MetricName>
+	</Metric>
+	<Metric ID="3004">
+		<MetricName>COUNT_L_RXPOWER</MetricName>
+	</Metric>
+	<Metric ID="3005">
+		<MetricName>LAST_L_RXPOWER</MetricName>
+	</Metric>		
+	<Metric ID="3007">
+		<MetricName>ISNULL_L_LOCATION_ID</MetricName>
+	</Metric>
+	<Metric ID="3008">
+		<MetricName>ISNULL_L_DEVICE_ID</MetricName>
+	</Metric>
+	<Metric ID="3009">
+		<MetricName>COUNT_L_SERVING_CELLID</MetricName>
+	</Metric>
+	<Metric ID="3010">
+		<MetricName>COUNT_L_SERVING_REF_ESNO</MetricName>
+	</Metric>
+	<Metric ID="3011">
+		<MetricName>COUNT_L_SERVING_ESNO</MetricName>
+	</Metric>
+	<Metric ID="3012">
+		<MetricName>COUNT_L_SERVING_DL_FREQUENCY</MetricName>
+	</Metric>
+	<Metric ID="3013">
+		<MetricName>COUNT_L_SERVING_RSRP</MetricName>
+	</Metric>
+	<Metric ID="3014">
+		<MetricName>COUNT_L_SERVING_RSRQ</MetricName>
+	</Metric>
+	<Metric ID="3015">
+		<MetricName>COUNT_L_SERVING_SNR</MetricName>
+	</Metric>
+	<Metric ID="3016">
+		<MetricName>COUNT_L_CW0_BLER</MetricName>
+	</Metric>
+	<Metric ID="3017">
+		<MetricName>COUNT_L_CW1_BLER</MetricName>
+	</Metric>
+	<Metric ID="3018">
+		<MetricName>COUNT_L_TOTAL_BLER</MetricName>
+	</Metric>
+	<Metric ID="3019">
+		<MetricName>COUNT_L_RANK</MetricName>
+	</Metric>	
+	<Metric ID="3020">
+		<MetricName>COUNT_L_RANK_1_CQI</MetricName>
+	</Metric>	
+	<Metric ID="3021">
+		<MetricName>COUNT_L_RANK_2_CW_0_CQI</MetricName>
+	</Metric>	
+	<Metric ID="3022">
+		<MetricName>COUNT_L_RANK_2_CW_1_CQI</MetricName>
+	</Metric>	
+	<Metric ID="3023">
+		<MetricName>COUNT_L_RANK_1_PMI</MetricName>
+	</Metric>	
+	<Metric ID="3024">
+		<MetricName>COUNT_L_RANK_2_PMI</MetricName>
+	</Metric>	
+	<Metric ID="3025">
+		<MetricName>COUNT_L_FREQUENCY</MetricName>
+	</Metric>	
+	<Metric ID="3026">
+		<MetricName>COUNT_L_CHANNEL_NUMBER</MetricName>
+	</Metric>
+	<Metric ID="3027">
+		<MetricName>MIN_L_TXPOWER</MetricName>
+	</Metric>
+	<Metric ID="3028">
+		<MetricName>MAX_L_TXPOWER</MetricName>
+	</Metric>
+</MetricDefinition>

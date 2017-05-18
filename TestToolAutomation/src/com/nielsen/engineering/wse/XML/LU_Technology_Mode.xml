@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TechnologyModes>
+	<TechnologyMode>
+		<TechnologyModeName>NA</TechnologyModeName>
+		<TechnologyModeId>00</TechnologyModeId>
+	</TechnologyMode>
+	<TechnologyMode>
+		<TechnologyModeName>G</TechnologyModeName>
+		<TechnologyModeId>01</TechnologyModeId>
+	</TechnologyMode>
+	<TechnologyMode>
+		<TechnologyModeName>U</TechnologyModeName>
+		<TechnologyModeId>02</TechnologyModeId>
+	</TechnologyMode>
+	<TechnologyMode>
+		<TechnologyModeName>Q</TechnologyModeName>
+		<TechnologyModeId>03</TechnologyModeId>
+	</TechnologyMode>
+	<TechnologyMode>
+		<TechnologyModeName>L</TechnologyModeName>
+		<TechnologyModeId>04</TechnologyModeId>
+	</TechnologyMode>
+	<TechnologyMode>
+		<TechnologyModeName>LTE</TechnologyModeName>
+		<TechnologyModeId>05</TechnologyModeId>
+	</TechnologyMode>
+	<TechnologyMode>
+		<TechnologyModeName>EVDO</TechnologyModeName>
+		<TechnologyModeId>06</TechnologyModeId>
+	</TechnologyMode>
+	<TechnologyMode>
+		<TechnologyModeName>HSPA</TechnologyModeName>
+		<TechnologyModeId>07</TechnologyModeId>
+	</TechnologyMode>
+</TechnologyModes>

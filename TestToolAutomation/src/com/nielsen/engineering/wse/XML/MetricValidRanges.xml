@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricValidRanges>
+	<Metric ID="050229">
+		<MinValue>10</MinValue>
+		<MaxValue>23</MaxValue>
+	</Metric>
+	<Metric ID="050270">
+		<MinValue>-40</MinValue>
+		<MaxValue>23</MaxValue>
+	</Metric>	
+	<Metric ID="050043">
+		<MinValue>-40</MinValue>
+		<MaxValue>23</MaxValue>
+	</Metric>	
+	<Metric ID="05009B">
+		<MinValue>-40</MinValue>
+		<MaxValue>23</MaxValue>
+	</Metric>	
+	<Metric ID="05020E">
+		<MinValue>-40</MinValue>
+		<MaxValue>23</MaxValue>
+	</Metric>	
+	<Metric ID="05020B">
+		<MinValue>-40</MinValue>
+		<MaxValue>23</MaxValue>
+	</Metric>	
+	<Metric ID="05020D">
+		<MinValue>-40</MinValue>
+		<MaxValue>23</MaxValue>
+	</Metric>	
+	<Metric ID="05020C">
+		<MinValue>-40</MinValue>
+		<MaxValue>23</MaxValue>
+	</Metric>
+	<Metric ID="05020A">
+		<MinValue>-40</MinValue>
+		<MaxValue>23</MaxValue>
+	</Metric>	
+	<Metric ID="050209">
+		<MinValue>-40</MinValue>
+		<MaxValue>23</MaxValue>
+	</Metric>
+	<Metric ID="05026C">
+		<MinValue>-40</MinValue>
+		<MaxValue>23</MaxValue>
+	</Metric>	
+	<Metric ID="050056">
+		<MinValue>-40</MinValue>
+		<MaxValue>23</MaxValue>
+	</Metric>
+	<Metric ID="050055">
+		<MinValue>-40</MinValue>
+		<MaxValue>23</MaxValue>
+	</Metric>
+	<Metric ID="05024C">
+		<MinValue>-40</MinValue>
+		<MaxValue>23</MaxValue>
+	</Metric>
+	<Metric ID="050247">
+		<MinValue>-40</MinValue>
+		<MaxValue>23</MaxValue>
+	</Metric>
+	<Metric ID="050246">
+		<MinValue>-40</MinValue>
+		<MaxValue>23</MaxValue>
+	</Metric>
+	<Metric ID="050241">
+		<MinValue>-40</MinValue>
+		<MaxValue>23</MaxValue>
+	</Metric>	
+	<Metric ID="050242">
+		<MinValue>-40</MinValue>
+		<MaxValue>23</MaxValue>
+	</Metric>
+	<Metric ID="050245">
+		<MinValue>-40</MinValue>
+		<MaxValue>23</MaxValue>
+	</Metric>
+	<Metric ID="050240">
+		<MinValue>-40</MinValue>
+		<MaxValue>23</MaxValue>
+	</Metric>
+</MetricValidRanges>

@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Rules>
+	<!--TCID: TestCaseID Example TC01 -->
+	<!--TCName: Provide the TestCase Name -->
+	<!-- AggregationType: Type of Aggrigation example : MAX,MIN,AVG,RANGE -->
+	<!-- TaskType : Example GET1,GET2,POST1 -->
+	<!-- Taskresults : Example Success,Failure,Drop -->
+	<!-- EventPhase: Example Dedicated,SETUP,IDLE -->
+	<!-- EventState Example IDLE START,CALL ATTEMPT,NA:No Specific Event State -->
+	<!--TechnologyMode: Example LTE,EVDO ,NA:No Specific TechnologyMode -->
+	<!-- MetricId: Example RXPOWER,TXPOWER NA:No Specific MetricId -->
+	<!-- TextfileId : Example STG_LTE_RF_DATA -->
+
+	<TCID ID="TC01">
+		<TCName>Verify the data availability of RXPOWER for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID> <!-- NA: No speific driveid , it applicable to all -->
+		<AggregationType>01</AggregationType><!--  01->Data availability,09->Range Check , 0A ->Null Check -->
+		<TaskType>00</TaskType>  <!-- 00->NA , 01->GET1,02->GET2 -->
+		<Taskresults>0000</Taskresults> <!-- 0000->NA,0001->CR1,0002->FAILURE -->
+		<EventPhase>00</EventPhase> <!-- 00->NA,01->DEDICATED,02->SETUP,03->IDLE -->
+		<EventState>00</EventState> <!-- 00->NA,01->IDLE START,02->CALL ATTEMPT,03->SETUP START -->
+		<TechnologyMode>05</TechnologyMode> <!-- 00->NA,01->G,02->U,03->Q .... 05->LTE -->
+		<MetricId>0229</MetricId> <!-- RXPOWER->0229,TXPOWER->0270 -->
+		<TextfileId>1A</TextfileId> <!-- 01->STG_AMR_CYCLES,02->STG_AMR_FRAMES ....1A->STG_LTE_RF_DATA -->
+	</TCID>	
+	<TCID ID="TC02">
+		<TCName>Verify the Range of TXPOWER for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>09</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>00</TechnologyMode>
+		<MetricId>0270</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC03">
+		<TCName>Verify the Null Check for RXPOWER</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>0A</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>00</TechnologyMode>
+		<MetricId>0229</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC04">
+		<TCName>Verify the data availability of TXPOWER for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0270</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC05">
+		<TCName>Verify the data availability of SERVING_CELLID for LTE
+		</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0240</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC06">
+		<TCName>Verify the data availability of SERVING_REF_ESNO for LTE
+		</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0245</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC07">
+		<TCName>Verify the data availability of SERVING_ESNO for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0242</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC08">
+		<TCName>Verify the data availability of SERVING_DL_FREQUENCY for LTE
+		</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0241</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC09">
+		<TCName>Verify the data availability of SERVING_RSRP for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0246</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC10">
+		<TCName>Verify the data availability of SERVING_RSRQ for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0247</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC11">
+		<TCName>Verify the data availability of SERVING_SNR for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>024C</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC12">
+		<TCName>Verify the data availability of CW0_BLER for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0055</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC13">
+		<TCName>Verify the data availability of CW1_BLER for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0056</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC14">
+		<TCName>Verify the data availability of TOTAL_BLER for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>026C</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC15">
+		<TCName>Verify the data availability of RANK for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0209</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC16">
+		<TCName>Verify the data availability of RANK_1_CQI for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>020A</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC17">
+		<TCName>Verify the data availability of RANK_2_CW_0_CQI for LTE
+		</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>020C</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC18">
+		<TCName>Verify the data availability of RANK_2_CW_1_CQI for LTE
+		</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>020D</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC19">
+		<TCName>Verify the Null Check for TXPOWER</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>0A</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0270</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC20">
+		<TCName>Verify the data availability of RANK_1_PMI for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>020B</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC21">
+		<TCName>Verify the data availability of RANK_2_PMI for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>020E</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC22">
+		<TCName>Verify the data availability of FREQUENCY for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>009B</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC23">
+		<TCName>Verify the data availability of CHANNEL_NUMBER for LTE
+		</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0043</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC24">
+		<TCName>Verify the range of SERVING_CELLID for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>09</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0240</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC25">
+		<TCName>Verify the range of SERVING_REF_ESNO for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>09</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0245</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC26">
+		<TCName>Verify the range of SERVING_ESNO for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>09</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0242</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC27">
+		<TCName>Verify the range of SERVING_DL_FREQUENCY for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>09</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0241</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC28">
+		<TCName>Verify the range of SERVING_RSRP for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>09</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0246</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC29">
+		<TCName>Verify the range of SERVING_RSRQ for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>09</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0247</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC30">
+		<TCName>Verify the range of SERVING_SNR for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>09</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>024C</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC31">
+		<TCName>Verify the range of CW0_BLER for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>09</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0055</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC32">
+		<TCName>Verify the range of CW1_BLER for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>09</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0056</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC33">
+		<TCName>Verify the range of TOTAL_BLER for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>09</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>026C</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC34">
+		<TCName>Verify the range of RANK for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>09</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0209</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC35">
+		<TCName>Verify the range of RANK_1_CQI for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>09</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>020A</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC36">
+		<TCName>Verify the range of RANK_2_CW_0_CQI for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>09</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>020C</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC37">
+		<TCName>Verify the range of RANK_2_CW_1_CQI for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>09</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>020D</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC38">
+		<TCName>Verify the range of RANK_1_PMI for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>09</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>020B</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC39">
+		<TCName>Verify the range of RANK_2_PMI for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>09</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>020E</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC40">
+		<TCName>Verify the range of FREQUENCY for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>09</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>009B</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC41">
+		<TCName>Verify the range of CHANNEL_NUMBER for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>09</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0043</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC42">
+		<TCName>Verify the Null Check for DRIVE_ID</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>0A</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>006D</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC43">
+		<TCName>Verify the Null Check for DEVICE_ID</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>0A</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>0062</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC44">
+		<TCName>Verify the Null Check for LOCATION_ID</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>0A</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>00D1</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>	
+	<TCID ID="TC45">
+		<TCName>Verify the Data Availability Check for CALL_RESULT_ID</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>00</TechnologyMode>
+		<MetricId>0035</MetricId>
+		<TextfileId>06</TextfileId>
+	</TCID>
+	<TCID ID="TC46">
+		<TCName>Verify the null of RANK_1_CQI for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>0A</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>00</TechnologyMode>
+		<MetricId>020A</MetricId>
+		<TextfileId>1A</TextfileId>
+	</TCID>
+	<TCID ID="TC47">
+		<TCName>Verify the data availabilty of SUM_VEHICLE_SPEED_IN_MPH for LTE</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>05</TechnologyMode>
+		<MetricId>03F7</MetricId>
+		<TextfileId>4B</TextfileId>
+	</TCID>
+	<TCID ID="TC48">
+		<TCName>Verify the data availabilty of SUM_VEHICLE_SPEED_IN_MPH for HSPA</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>07</TechnologyMode>
+		<MetricId>03F7</MetricId>
+		<TextfileId>4B</TextfileId>
+	</TCID>
+	<TCID ID="TC49">
+		<TCName>Verify the data availabilty of CARRIER_DEVICE_ID</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>00</TechnologyMode>
+		<MetricId>0037</MetricId>
+		<TextfileId>11</TextfileId>
+	</TCID>
+	<TCID ID="TC50">
+		<TCName>Verify the data availabilty of CHANNEL_NUMBER</TCName>
+		<DRIVE_ID>NA</DRIVE_ID>
+		<AggregationType>01</AggregationType>
+		<TaskType>00</TaskType>
+		<Taskresults>0000</Taskresults>
+		<EventPhase>00</EventPhase>
+		<EventState>00</EventState>
+		<TechnologyMode>00</TechnologyMode>
+		<MetricId>0043</MetricId>
+		<TextfileId>08</TextfileId>
+	</TCID>
+</Rules>

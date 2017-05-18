@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassMapping>
+	<Class ID="C1">
+		<ParentTableName>STG_SOURCE_FILES</ParentTableName>
+		<InsertTableName>AUT_DRIVE_INFO</InsertTableName>
+		<ClassName>com.nielsen.engineering.wse.CommonInformation.DriveInformation</ClassName>
+	</Class>
+	<Class ID="C2">
+		<ParentTableName>STG_LTE_TASK_STATE_DATA</ParentTableName>
+		<InsertTableName>AUT_TASK_INFO</InsertTableName>
+		<ClassName>com.nielsen.engineering.wse.CommonInformation.AUTTaskInfo</ClassName>
+	</Class>
+	<Class ID="C4">
+		<ParentTableName>STG_LTE_TASK_STATE_DATA</ParentTableName>
+		<InsertTableName>AUT_TASK_RESULTS</InsertTableName>
+		<ClassName>com.nielsen.engineering.wse.CommonInformation.AUTTaskResults</ClassName>
+	</Class>
+	<Class ID="C5">
+		<ParentTableName>STG_DRIVE_DEVICES</ParentTableName>
+		<InsertTableName>LU_CARRIER_INFO</InsertTableName>
+		<ClassName>com.nielsen.engineering.wse.CommonInformation.CarrierInformation</ClassName>
+	</Class>
+	<Class ID="C6">
+		<ParentTableName>STG_DRIVE_DEVICES</ParentTableName>
+		<InsertTableName>DEVICE_TECHNOLOGY_INFORMATION</InsertTableName>
+		<ClassName>com.nielsen.engineering.wse.CommonInformation.DeviceTechnologyInformation</ClassName>
+	</Class>
+	<Class ID="C7">
+		<ParentTableName>STG_LTE_TASK_STATE_DATA</ParentTableName>
+		<InsertTableName>RESULT_INFORMATION</InsertTableName>
+		<ClassName>com.nielsen.engineering.wse.CommonInformation.ResultInformation</ClassName>
+	</Class>
+	<Class ID="C8">
+		<ParentTableName>STG_LTE_TASK_STATE_DATA</ParentTableName>
+		<InsertTableName>AUT_EVENT_TIME</InsertTableName>
+		<ClassName>com.nielsen.engineering.wse.CommonInformation.EventTime</ClassName>
+	</Class>
+	<Class ID="C9">
+		<ParentTableName>STG_LTE_TASK_STATE_DATA</ParentTableName>
+		<InsertTableName>EVENT_DURATION</InsertTableName>
+		<ClassName>com.nielsen.engineering.wse.CommonInformation.EventTransitionDefinitions</ClassName>
+	</Class>
+	<Class ID="C10">
+		<ParentTableName>STG_LTE_TASK_STATE_DATA</ParentTableName>
+		<InsertTableName>AUT_PHASE_DURATION</InsertTableName>
+		<ClassName>com.nielsen.engineering.wse.CommonInformation.AUTPhaseDuration</ClassName>
+	</Class>
+	<Class ID="C11">
+		<ParentTableName>STG_LTE_TASK_DATA</ParentTableName>
+		<InsertTableName>AUT_MODE_INFO</InsertTableName>
+		<ClassName>com.nielsen.engineering.wse.CommonInformation.AUTPhaseModeInfo</ClassName>
+	</Class>
+	<Class ID="C12">
+		<ParentTableName>STG_LTE_TASK_STATE_DATA</ParentTableName>
+		<InsertTableName>METRIC_AGG_DATA</InsertTableName>
+		<ClassName>com.nielsen.engineering.wse.CommonInformation.MetricSampleCount</ClassName>
+	</Class>
+</ClassMapping>

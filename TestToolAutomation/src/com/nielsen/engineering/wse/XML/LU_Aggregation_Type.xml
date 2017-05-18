@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AggregationTypes>
+	<Aggregation>
+		<AggregationType>NA</AggregationType>
+		<AggregationID>00</AggregationID>
+	</Aggregation>
+	<Aggregation>
+		<AggregationType>COUNT</AggregationType>
+		<AggregationID>01</AggregationID>
+	</Aggregation>
+	<Aggregation>
+		<AggregationType> DURATION</AggregationType>
+		<AggregationID>02</AggregationID>
+	</Aggregation>
+	<Aggregation>
+		<AggregationType> AVG</AggregationType>
+		<AggregationID>03</AggregationID>
+	</Aggregation>
+	<Aggregation>
+		<AggregationType>MIN</AggregationType>
+		<AggregationID>04</AggregationID>
+	</Aggregation>
+	<Aggregation>
+		<AggregationType>MAX</AggregationType>
+		<AggregationID>05</AggregationID>
+	</Aggregation>
+	<Aggregation>
+		<AggregationType>MODE</AggregationType>
+		<AggregationID>06</AggregationID>
+	</Aggregation>
+	<Aggregation>
+		<AggregationType>TIME</AggregationType>
+		<AggregationID>07</AggregationID>
+	</Aggregation>
+	<Aggregation>
+		<AggregationType>LASTUSED</AggregationType>
+		<AggregationID>08</AggregationID>
+	</Aggregation>
+	<Aggregation>
+		<AggregationType>RANGE</AggregationType>
+		<AggregationID>09</AggregationID>
+	</Aggregation>
+	<Aggregation>
+		<AggregationType>ISNULL</AggregationType>
+		<AggregationID>0A</AggregationID>
+	</Aggregation>	 
+</AggregationTypes>

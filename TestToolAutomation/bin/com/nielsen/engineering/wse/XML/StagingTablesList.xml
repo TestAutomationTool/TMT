@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StagingTables>
+	<Table ID="T1">
+		<TableName>STG_DRIVE_DEVICES</TableName>
+	</Table>
+	<Table ID="T2">
+		<TableName>STG_LTE_RF_DATA</TableName>
+	</Table>
+	<Table ID="T3">
+		<TableName>STG_SOURCE_FILES</TableName>
+	</Table>
+	<Table ID="T4">
+		<TableName>STG_LTE_TASK_STATE_DATA</TableName>
+	</Table>
+	<Table ID="T5">
+		<TableName>STG_EVDO_RxPOWER_DATA</TableName>
+	</Table>
+	<Table ID="T6">
+		<TableName>STG_LTE_TASK_DATA</TableName>
+	</Table>	 	 
+</StagingTables>

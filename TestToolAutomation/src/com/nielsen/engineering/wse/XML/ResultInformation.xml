@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ResultInformation>
+	<Result ID="6001">
+		<CollectionTypeIND>V</CollectionTypeIND>
+		<ResultName>NORMAL</ResultName>
+	</Result>
+	<Result ID="6002">
+		<CollectionTypeIND>V</CollectionTypeIND>
+		<ResultName>DROP</ResultName>
+	</Result>
+	<Result ID="6003">
+		<CollectionTypeIND>V</CollectionTypeIND>
+		<ResultName>FAST BUSY</ResultName>
+	</Result>
+	<Result ID="7001">
+		<CollectionTypeIND>D</CollectionTypeIND>
+		<ResultName>SUCCESS</ResultName>
+	</Result>
+	<Result ID="7002">
+		<CollectionTypeIND>D</CollectionTypeIND>
+		<ResultName>SETUP FAIL</ResultName>
+	</Result>
+	<Result ID="7003">
+		<CollectionTypeIND>D</CollectionTypeIND>
+		<ResultName>TRAFFIC FAIL</ResultName>
+	</Result>
+</ResultInformation>

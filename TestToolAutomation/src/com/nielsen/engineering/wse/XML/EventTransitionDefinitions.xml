@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EventTransitionDefinition>
+	<EventTransition ID="2001">
+		<EventTransitionName>Setup Start-Traffic Start</EventTransitionName>
+	</EventTransition>
+	<EventTransition ID="2002">
+		<EventTransitionName>Traffic Start-Success</EventTransitionName>
+	</EventTransition>
+	<EventTransition ID="2003">
+		<EventTransitionName>Call Establishment-Call Termination</EventTransitionName>
+	</EventTransition>
+	<EventTransition ID="2010">
+		<EventTransitionName>G_DEDICATED</EventTransitionName>
+	</EventTransition>
+	<EventTransition ID="2011">
+		<EventTransitionName>U_DEDICATED</EventTransitionName>
+	</EventTransition>
+	<EventTransition ID="2012">
+		<EventTransitionName>L_DEDICATED</EventTransitionName>
+	</EventTransition>
+	<EventTransition ID="2013">
+		<EventTransitionName>Q_DEDICATED</EventTransitionName>
+	</EventTransition>
+	<EventTransition ID="2014">
+		<EventTransitionName>G_SETUP</EventTransitionName>
+	</EventTransition>
+	<EventTransition ID="2015">
+		<EventTransitionName>Q_SETUP</EventTransitionName>
+	</EventTransition>
+	<EventTransition ID="2016">
+		<EventTransitionName>L_SETUP</EventTransitionName>
+	</EventTransition>
+	<EventTransition ID="2017">
+		<EventTransitionName>U_SETUP</EventTransitionName>
+	</EventTransition>
+</EventTransitionDefinition>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetricDefinitions>
+	<MetricDefinition>
+		<MetricDefinitionName>COUNT_GET1_SUCCESS_DEDICATED_LTE_RXPOWER_STG_CALL_DATA</MetricDefinitionName>
+		<MetricDefinitionId>01010001010005000103</MetricDefinitionId>
+	</MetricDefinition>
+	<MetricDefinition>
+		<MetricDefinitionName>AVG_ M2L10ASRVOICE_DROP_SETUP_G_TXPOWER_NA</MetricDefinitionName>
+		<MetricDefinitionId>03070004020001000200</MetricDefinitionId>
+	</MetricDefinition>
+	<MetricDefinition>
+		<MetricDefinitionName>COUNT_M2M10ASRVOICE_CALL_DEDICATED_MMOS_NA</MetricDefinitionName>
+		<MetricDefinitionId>01080003010000000700</MetricDefinitionId>
+	</MetricDefinition>
+	<MetricDefinition>
+		<MetricDefinitionName>DURATION_M2M10ASRVOICE_CALL_DEDICATED_NA</MetricDefinitionName>
+		<MetricDefinitionId>02080003010000000000</MetricDefinitionId>
+	</MetricDefinition>
+</MetricDefinitions>

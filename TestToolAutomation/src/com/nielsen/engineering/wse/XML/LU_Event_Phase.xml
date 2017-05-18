@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EventPhases>
+	<EventPhase>
+		<EventPhaseName>DEDICATED</EventPhaseName>
+		<EventPhaseId>01</EventPhaseId>
+	</EventPhase>
+	<EventPhase>
+		<EventPhaseName>SETUP</EventPhaseName>
+		<EventPhaseId>02</EventPhaseId>
+	</EventPhase>
+	<EventPhase>
+		<EventPhaseName>IDLE</EventPhaseName>
+		<EventPhaseId>03</EventPhaseId>
+	</EventPhase>
+	<EventPhase>
+		<EventPhaseName>DOWNLOAD FAILURE</EventPhaseName>
+		<EventPhaseId>04</EventPhaseId>
+	</EventPhase>
+	<EventPhase>
+		<EventPhaseName>TRAFFIC FAILURE</EventPhaseName>
+		<EventPhaseId>05</EventPhaseId>
+	</EventPhase>
+	<EventPhase>
+		<EventPhaseName>SETUP FAILURE</EventPhaseName>
+		<EventPhaseId>06</EventPhaseId>
+	</EventPhase>
+	<EventPhase>
+		<EventPhaseName>PENDING FAILURE</EventPhaseName>
+		<EventPhaseId>07</EventPhaseId>
+	</EventPhase>
+</EventPhases>

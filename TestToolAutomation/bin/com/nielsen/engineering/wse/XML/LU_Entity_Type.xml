@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntityTypes>
+	<Entity>
+		<EntityName>AGREGATION_TYPE</EntityName>
+		<Example>COUNT, DURATION, AVG, DBAVG, MAX, MODE, TIME etc.</Example>
+		<Position>Octet 1</Position>
+	</Entity>
+	<Entity>
+		<EntityName>TASK_TYPE</EntityName>
+		<Example>GET1,POST1, M2L10ASRVOICE, M2M10ASRVOICE, YOUTUBE1, SMS1 Etc</Example>
+		<Position>Octet 2</Position>
+	</Entity>
+	<Entity>
+		<EntityName>TASK_RESULT</EntityName>
+		<Example>SUCCESS, FAILURE, DROP_REST,DROP,CR3,DOWNLOADFAILURE</Example>
+		<Position>OCTET 3,4</Position>
+	</Entity>
+	<Entity>
+		<EntityName>EVENT_PHASE</EntityName>
+		<Example>DEDICATED, SETUP, IDLE Etc</Example>
+		<Position>Octet 5</Position>
+	</Entity>
+	<Entity>
+		<EntityName>EVENT_STATE</EntityName>
+		<Example>TRAFFIC_START</Example>
+		<Position>Octet 6</Position>
+	</Entity>
+	<Entity>
+		<EntityName>TECHNOLOGY_MODE</EntityName>
+		<Example>G,U,Q,EVDO,HSPA,LTE,L Etc.</Example>
+		<Position>Octet 7</Position>
+	</Entity>
+	<Entity>
+		<EntityName>METRIC_NAME</EntityName>
+		<Example>RXPOWER, MODULATION_SCHEME</Example>
+		<Position>Octet 8,9</Position>
+	</Entity>
+	<Entity>
+		<EntityName>TEXT FILE NAME</EntityName>
+		<Example>STG_LTE_RF_DATA,STG_TASK_STATE_DATA etc</Example>
+		<Position>Octet 10</Position>
+	</Entity>
+</EntityTypes>

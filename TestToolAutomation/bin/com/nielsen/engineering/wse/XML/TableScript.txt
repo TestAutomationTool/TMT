@@ -1,0 +1,731 @@
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[RESULT_INFORMATION]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[RESULT_INFORMATION](
+	[DRIVE_ID] [int] NOT NULL,
+	[SOURCE_FILE_NAME] [varchar](100) NULL,
+	[CALL_ID] [int] NULL,
+	[TASK_ID] [int] NULL,
+	[RESULT_ID] [int] NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[RANGE_VALIDATION_TOTAL_CALLS]    Script Date: 05/09/2017 17:00:21 ******/
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[RANGE_VALIDATION_TOTAL_CALLS]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[RANGE_VALIDATION_TOTAL_CALLS](
+	[TESTCASE_ID] [varchar](100) NULL,
+	[TESTCASE_NAME] [varchar](5000) NULL,
+	[METRIC_CODE] [varchar](500) NULL,
+	[DRIVE_ID] [int] NULL,
+	[SOURCE_FILE_NAME] [varchar](100) NULL,
+	[CALL_ID] [int] NULL,
+	[TASK_ID] [int] NULL,
+	[METRIC_MIN_VALUE] [numeric](20, 3) NULL,
+	[METRIC_MAX_VALUE] [numeric](20, 3) NULL,
+	[LU_MIN_VALUE] [numeric](9, 3) NULL,
+	[LU_MAX_VALUE] [numeric](9, 3) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[QUERY_FUNCTION_PARAMETERS1]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[QUERY_FUNCTION_PARAMETERS1]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[QUERY_FUNCTION_PARAMETERS1](
+	[TESTCASE_ID] [varchar](100) NULL,
+	[EVENT_PHASE_ID] [varchar](100) NULL,
+	[TEXTFILE_NAME] [varchar](500) NULL,
+	[WHERE_CLAUSE] [varchar](514) NULL,
+	[METRICS] [nvarchar](max) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[QUERY_FUNCTION_PARAMETERS]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[QUERY_FUNCTION_PARAMETERS]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[QUERY_FUNCTION_PARAMETERS](
+	[EVENT_PHASE_ID] [varchar](100) NULL,
+	[TEXTFILE_NAME] [varchar](500) NULL,
+	[WHERE_CLAUSE] [varchar](514) NULL,
+	[METRICS] [nvarchar](max) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[MetricCount]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[MetricCount]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[MetricCount](
+	[DRIVE_ID] [int] NULL,
+	[CALL_ID] [int] NULL,
+	[TASK_ID] [smallint] NULL,
+	[SOURCE_FILE_NAME] [varchar](1000) NULL,
+	[MIN_GPS_TIME] [datetime] NULL,
+	[MAX_GPS_TIME] [datetime] NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[METRIC_SAMPLE_COUNT]    Script Date: 05/09/2017 17:00:21 ******/
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[METRIC_SAMPLE_COUNT]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[METRIC_SAMPLE_COUNT](
+	[DRIVE_ID] [int] NOT NULL,
+	[SOURCE_FILE_NAME] [varchar](100) NULL,
+	[CALL_ID] [int] NULL,
+	[TASK_ID] [int] NULL,
+	[METRIC_ID] [int] NULL,
+	[METRIC_SAMPLE_COUNT] [int] NULL,
+	[METRIC_MIN_VALUE] [numeric](9, 3) NULL,
+	[METRIC_MAX_VALUE] [numeric](9, 3) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[METRIC_AGG_DATA]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[METRIC_AGG_DATA]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[METRIC_AGG_DATA](
+	[DRIVE_ID] [int] NOT NULL,
+	[SOURCE_FILE_NAME] [varchar](100) NULL,
+	[CALL_ID] [int] NULL,
+	[TASK_ID] [int] NULL,
+	[METRIC_ID] [varchar](500) NULL,
+	[METRIC_VALUE] [numeric](20, 3) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[LU_TEXTFILE_NAME]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LU_TEXTFILE_NAME]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[LU_TEXTFILE_NAME](
+	[TEXTFILE_NAME] [varchar](500) NULL,
+	[TEXTFILE_ID] [varchar](500) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[LU_TECHNOLOGY_MODE]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LU_TECHNOLOGY_MODE]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[LU_TECHNOLOGY_MODE](
+	[TECHNOLOGY_MODE] [varchar](500) NULL,
+	[TECHNOLOGY_MODE_ID] [varchar](500) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[LU_TASK_TYPE]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LU_TASK_TYPE]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[LU_TASK_TYPE](
+	[TASK_TYPE] [varchar](500) NULL,
+	[TASK_ID] [varchar](500) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[LU_TASK_RESULTS]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LU_TASK_RESULTS]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[LU_TASK_RESULTS](
+	[TASK_RESULTS] [varchar](500) NULL,
+	[TASK_RESULT_ID] [varchar](500) NULL
+) ON [PRIMARY]
+END
+
+/****** Object:  Table [dbo].[LU_ResultInformation]    Script Date: 05/09/2017 17:00:21 ******/
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LU_ResultInformation]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[LU_ResultInformation](
+	[ResultID] [int] NOT NULL,
+	[CollectionTypeIND] [varchar](50) NULL,
+	[ResultName] [varchar](50) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[LU_Metric_Valid_Ranges]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LU_Metric_Valid_Ranges]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[LU_Metric_Valid_Ranges](
+	[METRIC_ID] [varchar](100) NOT NULL,
+	[MIN_VALUE] [numeric](9, 3) NULL,
+	[MAX_VALUE] [numeric](9, 3) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[LU_METRIC_NAME]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LU_METRIC_NAME]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[LU_METRIC_NAME](
+	[METRIC_NAME] [varchar](500) NULL,
+	[METRIC_ID] [varchar](500) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[LU_Metric_Definitions]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LU_Metric_Definitions]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[LU_Metric_Definitions](
+	[METRIC_ID] [int] NOT NULL,
+	[METRIC_NAME] [varchar](100) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[LU_MarketCarrier_Information]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LU_MarketCarrier_Information]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[LU_MarketCarrier_Information](
+	[PORT] [varchar](50) NULL,
+	[CARRIER_NAME] [varchar](50) NULL,
+	[DEVICE_TECHNOLOGY_NAME] [varchar](50) NULL,
+	[SUPPORTED_TECHNOLOGY] [varchar](50) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[LU_EventDefinitions]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LU_EventDefinitions]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[LU_EventDefinitions](
+	[EVENT_ID] [int] NOT NULL,
+	[EVENT_NAME] [varchar](100) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[LU_Event_Transition_Definitions]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LU_Event_Transition_Definitions]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[LU_Event_Transition_Definitions](
+	[EVENT_TRANSITION_ID] [int] NOT NULL,
+	[EVENT_TRANSITION_NAME] [varchar](100) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[LU_EVENT_STATE]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LU_EVENT_STATE]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[LU_EVENT_STATE](
+	[EVENT_STATE] [varchar](500) NULL,
+	[EVENT_STATE_ID] [varchar](500) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[LU_EVENT_PHASE]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LU_EVENT_PHASE]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[LU_EVENT_PHASE](
+	[EVENT_PHASE] [varchar](500) NULL,
+	[EVENT_PHASE_ID] [varchar](500) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[LU_ENTITY_TYPE]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LU_ENTITY_TYPE]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[LU_ENTITY_TYPE](
+	[ENTITY_NAME] [varchar](100) NULL,
+	[EXAMPLE] [varchar](500) NULL,
+	[POSITION] [varchar](500) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[LU_DriveID_Information]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LU_DriveID_Information]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[LU_DriveID_Information](
+	[DRIVEID] [int] NOT NULL,
+	[COLLECTION_TYPE] [varchar](50) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[LU_CARRIER_INFO]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LU_CARRIER_INFO]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[LU_CARRIER_INFO](
+	[DRIVE_ID] [int] NOT NULL,
+	[CARRIER_NAME] [varchar](1000) NULL,
+	[PORT] [varchar](50) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[LU_AGREGATION_TYPE]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LU_AGREGATION_TYPE]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[LU_AGREGATION_TYPE](
+	[AGGREAGATION_TYPE] [varchar](500) NULL,
+	[AGGREGATION_ID] [varchar](500) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[FAILED_CALLL_TASK_LEVEL_REPORT]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[FAILED_CALLL_TASK_LEVEL_REPORT]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[FAILED_CALLL_TASK_LEVEL_REPORT](
+	[TESTCASE_ID] [varchar](100) NULL,
+	[TESTCASE_NAME] [varchar](5000) NULL,
+	[METRIC_CODE] [varchar](500) NULL,
+	[DRIVE_ID] [int] NULL,
+	[SOURCE_FILE_NAME] [varchar](100) NULL,
+	[CALL_ID] [int] NULL,
+	[TASK_ID] [int] NULL,
+	[METRIC_ID] [varchar](500) NULL,
+	[METRIC_VALUE] [numeric](20, 3) NULL,
+	[ROOTCAUSE] [varchar](max) NULL,
+	[ISSUE_IN_MODULE] [varchar](max) NULL,
+	[RECOMMENDED_ACTION] [varchar](max) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[AUT_EVENT_TIME]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[AUT_EVENT_TIME]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[AUT_EVENT_TIME](
+	[DRIVE_ID] [int] NOT NULL,
+	[SOURCE_FILE_NAME] [varchar](100) NULL,
+	[CALL_ID] [int] NULL,
+	[TASK_ID] [int] NULL,
+	[EVENT_ID] [int] NULL,
+	[EVENT_TIME] [datetime] NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[EVENT_DURATION]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[EVENT_DURATION]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[EVENT_DURATION](
+	[DRIVE_ID] [int] NOT NULL,
+	[SOURCE_FILE_NAME] [varchar](100) NULL,
+	[CALL_ID] [int] NULL,
+	[TASK_ID] [int] NULL,
+	[EVENT_TRANSITION_ID] [int] NULL,
+	[EVENT_TRANSITION DURATION(msec)] [bigint] NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[AUT_DRIVE_INFO]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[AUT_DRIVE_INFO]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[AUT_DRIVE_INFO](
+	[DRIVE_ID] [int] NOT NULL,
+	[PORT_ID] [varchar](50) NULL,
+	[COLLECTION_TYPE] [varchar](50) NULL,
+	[COLLECTION_PLATFORM] [varchar](100) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[DEVICE_TECHNOLOGY_INFORMATION]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[DEVICE_TECHNOLOGY_INFORMATION]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[DEVICE_TECHNOLOGY_INFORMATION](
+	[DRIVE_ID] [int] NOT NULL,
+	[PORT] [varchar](50) NULL,
+	[DEVICE_TECHNOLOGY_NAME] [varchar](1000) NULL,
+	[SUPPORTED_TECHNOLOGY] [varchar](1000) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[CARRIER_INFORMATION]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[CARRIER_INFORMATION]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[CARRIER_INFORMATION](
+	[DRIVE_ID] [int] NOT NULL,
+	[CARRIER_NAME] [varchar](1000) NULL,
+	[PORT] [varchar](50) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[AUT_PHASE_DURATION]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[AUT_PHASE_DURATION]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[AUT_PHASE_DURATION](
+	[DRIVE_ID] [int] NULL,
+	[SOURCE_FILE_NAME] [varchar](1000) NULL,
+	[CALL_ID] [int] NULL,
+	[TASK_ID] [smallint] NULL,
+	[PHASE_ID] [varchar](2) NOT NULL,
+	[PHASE_START_TIME] [datetime] NULL,
+	[PHASE_END_TIME] [datetime] NULL,
+	[PHASE_DURATION] [int] NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[AUT_MODE_INFO]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[AUT_MODE_INFO]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[AUT_MODE_INFO](
+	[DRIVE_ID] [int] NULL,
+	[SOURCE_FILE_NAME] [varchar](1000) NULL,
+	[CALL_ID] [int] NULL,
+	[TASK_ID] [smallint] NULL,
+	[PHASE_ID] [varchar](2) NOT NULL,
+	[TECHNOLOGY_MODE_DESC] [varchar](100) NULL,
+	[TECHNOLOGY_MODE_ID] [varchar](5) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[TOTAL_CALL_TASK_LEVEL_REPORT]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[TOTAL_CALL_TASK_LEVEL_REPORT]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[TOTAL_CALL_TASK_LEVEL_REPORT](
+	[TESTCASE_ID] [varchar](100) NULL,
+	[TESTCASE_NAME] [varchar](5000) NULL,
+	[METRIC_CODE] [varchar](500) NULL,
+	[DRIVE_ID] [int] NULL,
+	[SOURCE_FILE_NAME] [varchar](100) NULL,
+	[CALL_ID] [int] NULL,
+	[TASK_ID] [int] NULL,
+	[METRIC_ID] [varchar](500) NULL,
+	[METRIC_VALUE] [numeric](20, 3) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[TESTCASES]    Script Date: 05/09/2017 17:00:21 ******/
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[TESTCASES]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[TESTCASES](
+	[TESTCASE_ID] [varchar](100) NULL,
+	[DRIVE_ID] [varchar](100) NULL,
+	[TESTCASE_NAME] [varchar](5000) NULL,
+	[AGGREATION_TYPE_ID] [varchar](100) NULL,
+	[TASK_TYPE_ID] [varchar](100) NULL,
+	[TASK_RESULTS_ID] [varchar](100) NULL,
+	[EVENT_PHASE_ID] [varchar](100) NULL,
+	[EVENT_STATE_ID] [varchar](100) NULL,
+	[TECHNOLOGY_MODE_ID] [varchar](100) NULL,
+	[METRIC_ID] [varchar](100) NULL,
+	[TEXTFILE_ID] [varchar](100) NULL,
+	[METRIC_CODE] [varchar](500) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[TESTCASE_METRICS1]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[TESTCASE_METRICS1]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[TESTCASE_METRICS1](
+	[TESTCASE_ID] [varchar](100) NULL,
+	[DRIVE_ID] [varchar](100) NULL,
+	[TESTCASE_NAME] [varchar](5000) NULL,
+	[AGGREATION_TYPE_ID] [varchar](100) NULL,
+	[TASK_TYPE_ID] [varchar](100) NULL,
+	[TASK_RESULTS_ID] [varchar](100) NULL,
+	[EVENT_PHASE_ID] [varchar](100) NULL,
+	[EVENT_STATE_ID] [varchar](100) NULL,
+	[TECHNOLOGY_MODE_ID] [varchar](100) NULL,
+	[METRIC_ID] [varchar](100) NULL,
+	[TEXTFILE_ID] [varchar](100) NULL,
+	[METRIC_CODE] [varchar](500) NULL,
+	[METRIC_NAME] [varchar](500) NULL,
+	[METRIC_CAL] [varchar](2427) NULL,
+	[TEXTFILE_NAME] [varchar](500) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[TESTCASE_METRICS]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[TESTCASE_METRICS]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[TESTCASE_METRICS](
+	[TESTCASE_ID] [varchar](100) NULL,
+	[DRIVE_ID] [varchar](100) NULL,
+	[TESTCASE_NAME] [varchar](5000) NULL,
+	[AGGREATION_TYPE_ID] [varchar](100) NULL,
+	[TASK_TYPE_ID] [varchar](100) NULL,
+	[TASK_RESULTS_ID] [varchar](100) NULL,
+	[EVENT_PHASE_ID] [varchar](100) NULL,
+	[EVENT_STATE_ID] [varchar](100) NULL,
+	[TECHNOLOGY_MODE_ID] [varchar](100) NULL,
+	[METRIC_ID] [varchar](100) NULL,
+	[TEXTFILE_ID] [varchar](100) NULL,
+	[METRIC_CODE] [varchar](500) NULL,
+	[METRIC_NAME] [varchar](500) NULL,
+	[METRIC_CAL] [varchar](2427) NULL,
+	[TEXTFILE_NAME] [varchar](500) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[Test]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Test]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Test](
+	[ID] [int] NULL,
+	[Name] [varchar](50) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[TEMP_AGG_DATA]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[TEMP_AGG_DATA]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[TEMP_AGG_DATA](
+	[DRIVE_ID] [int] NULL,
+	[SOURCE_FILE_NAME] [varchar](1000) NULL,
+	[CALL_ID] [int] NULL,
+	[TASK_ID] [smallint] NULL,
+	[PHASE_ID] [varchar](2) NOT NULL,
+	[0A00000000000502701A] [int] NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[STG_SOURCE_FILES]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[STG_SOURCE_FILES]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[STG_SOURCE_FILES](
+	[DRIVE_ID] [int] NULL,
+	[SOURCE_FILE_NAME] [varchar](1000) NULL,
+	[DATE_ID] [int] NULL,
+	[SOURCE_FILE_TYPE] [char](1) NULL,
+	[BEGIN_LOCATION_ID] [int] NULL,
+	[END_LOCATION_ID] [int] NULL,
+	[BEGIN_TIME] [datetime] NULL,
+	[END_TIME] [datetime] NULL,
+	[CHASSIS_MAC_ADDRESS] [varchar](100) NULL,
+	[COLLECTION_PLATFORM] [varchar](100) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[STG_LTE_TASK_STATE_DATA]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[STG_LTE_TASK_STATE_DATA]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[STG_LTE_TASK_STATE_DATA](
+	[DRIVE_ID] [int] NULL,
+	[SOURCE_FILE_NAME] [varchar](1000) NULL,
+	[TASK_STATE_DATA_ID] [int] NULL,
+	[DEVICE_ID] [int] NULL,
+	[CALL_ID] [int] NULL,
+	[TASK_ID] [smallint] NULL,
+	[LOCATION_ID] [int] NULL,
+	[GPS_TIME] [datetime] NULL,
+	[TASK_NAME] [varchar](100) NULL,
+	[TASK_STATE_DESC] [varchar](2000) NULL,
+	[SOURCE_IP_ADDRESS] [varchar](100) NULL,
+	[TASK_STATUS_DESC] [varchar](100) NULL,
+	[TASK_DIRECTION] [varchar](50) NULL,
+	[TASK_DURATION] [numeric](9, 3) NULL,
+	[TASK_END_DESC] [varchar](100) NULL,
+	[TASK_END_CAUSE_DESC] [varchar](100) NULL,
+	[ROUND_TRIP_TIME] [numeric](9, 3) NULL,
+	[PING_SENT] [int] NULL,
+	[PING_RECEIVED] [int] NULL,
+	[PING_LOST] [int] NULL,
+	[TOTAL_BYTES_RECEIVED] [numeric](10, 2) NULL,
+	[TOTAL_BYTES_SENT] [numeric](18, 2) NULL,
+	[TASK_NETWORK_THP_DL] [numeric](12, 6) NULL,
+	[TASK_NETWORK_THP_UL] [numeric](10, 2) NULL,
+	[TIME_RECEIVED_MS] [int] NULL,
+	[TIME_SENT_MS] [int] NULL,
+	[PARALLEL_TASK] [varchar](10) NULL,
+	[PARALLEL_TASK_NUMBER] [int] NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[STG_LTE_TASK_DATA]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[STG_LTE_TASK_DATA]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[STG_LTE_TASK_DATA](
+	[DRIVE_ID] [int] NULL,
+	[SOURCE_FILE_NAME] [varchar](1000) NULL,
+	[TASK_SEQ_ID] [int] NULL,
+	[TASK_DATA_ID] [int] NULL,
+	[DEVICE_ID] [smallint] NULL,
+	[CALL_ID] [int] NULL,
+	[SUB_TASK_ID] [smallint] NULL,
+	[TASK_ID] [smallint] NULL,
+	[TECHNOLOGY_MODE_DESC] [varchar](100) NULL,
+	[TASK_STATE_DESC] [varchar](100) NULL,
+	[LOCATION_ID] [int] NULL,
+	[CONNECTION_STATE_DESC] [varchar](100) NULL,
+	[GPS_TIME] [datetime] NULL,
+	[TIME_ELAPSED] [numeric](9, 3) NULL,
+	[RECEIVED_TIME] [numeric](9, 3) NULL,
+	[TRANSMITTED_TIME] [numeric](9, 3) NULL,
+	[RECEIVED_BYTES] [numeric](18, 3) NULL,
+	[TRANSMITTED_BYTES] [numeric](18, 3) NULL,
+	[DNS_LOOKUP_TIME] [numeric](9, 3) NULL,
+	[MILES_DRIVEN] [numeric](9, 6) NULL,
+	[SPEED_MPH] [numeric](9, 6) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[STG_LTE_RF_DATA]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[STG_LTE_RF_DATA]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[STG_LTE_RF_DATA](
+	[DRIVE_ID] [int] NULL,
+	[SOURCE_FILE_NAME] [varchar](1000) NULL,
+	[RF_DATA_ID] [int] NULL,
+	[DEVICE_ID] [int] NULL,
+	[LOCATION_ID] [int] NULL,
+	[GPS_TIME] [datetime] NULL,
+	[RXPOWER] [numeric](9, 3) NULL,
+	[TXPOWER] [numeric](9, 3) NULL,
+	[SERVING_CELLID] [int] NULL,
+	[SERVING_REF_ESNO] [numeric](10, 2) NULL,
+	[SERVING_ESNO] [numeric](10, 2) NULL,
+	[SERVING_DL_FREQUENCY] [numeric](10, 2) NULL,
+	[BANDWIDTH] [numeric](10, 2) NULL,
+	[SERVING_RSRP] [numeric](10, 2) NULL,
+	[SERVING_RSRQ] [numeric](10, 2) NULL,
+	[SERVING_RSSI_0] [numeric](10, 2) NULL,
+	[SERVING_RSSI_1] [numeric](10, 2) NULL,
+	[SERVING_RSSI_2] [numeric](10, 2) NULL,
+	[SERVING_RSSI_3] [numeric](10, 2) NULL,
+	[SERVING_SNR] [numeric](10, 2) NULL,
+	[CW0_BLER] [numeric](10, 2) NULL,
+	[CW1_BLER] [numeric](10, 2) NULL,
+	[TOTAL_BLER] [numeric](10, 2) NULL,
+	[RANK] [int] NULL,
+	[RANK_1_CQI] [int] NULL,
+	[RANK_2_CW_0_CQI] [int] NULL,
+	[RANK_2_CW_1_CQI] [int] NULL,
+	[RANK_1_PMI] [int] NULL,
+	[RANK_2_PMI] [int] NULL,
+	[PHY_PDSCH_CW0_DL_TP] [varchar](100) NULL,
+	[PHY_PDSCH_CW1_DL_TP] [varchar](100) NULL,
+	[PHY_PDSCH_TOT_DL_TP] [varchar](100) NULL,
+	[PHY_PUSCH_TOT_UL_TP] [varchar](100) NULL,
+	[RLC_TOT_DL_TP] [varchar](50) NULL,
+	[RLC_TOT_UL_TP] [varchar](50) NULL,
+	[MAC_TOT_DL_TP] [varchar](50) NULL,
+	[MAC_TOT_UL_TP] [varchar](50) NULL,
+	[PDCP_DL_TP] [varchar](50) NULL,
+	[PDCP_UL_TP] [varchar](50) NULL,
+	[SEARCHER_PHY_CELL_INDEX] [int] NULL,
+	[SEARCHER_PHY_CELL_DESCRIPTION] [varchar](50) NULL,
+	[SEARCHER_PHY_CELL_CELL_ID] [int] NULL,
+	[SEARCHER_RSRP] [numeric](10, 2) NULL,
+	[SEARCHER_DL_FREQ] [numeric](10, 2) NULL,
+	[SEARCHER_RSSI] [numeric](10, 2) NULL,
+	[SEARCHER_RSRQ] [varchar](50) NULL,
+	[CHANNEL_NUMBER] [int] NULL,
+	[FREQUENCY] [int] NULL,
+	[NRB] [int] NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[STG_EVDO_TASK_STATE_DATA]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[STG_EVDO_TASK_STATE_DATA]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[STG_EVDO_TASK_STATE_DATA](
+	[DRIVE_ID] [int] NULL,
+	[SOURCE_FILE_NAME] [varchar](1000) NULL,
+	[TASK_STATE_DATA_ID] [int] NULL,
+	[DEVICE_ID] [smallint] NULL,
+	[CALL_ID] [int] NULL,
+	[TASK_ID] [smallint] NULL,
+	[LOCATION_ID] [int] NULL,
+	[GPS_TIME] [datetime] NULL,
+	[TASK_NAME] [varchar](500) NULL,
+	[TASK_STATE_DESC] [varchar](2000) NULL,
+	[SOURCE_IP_ADDRESS] [varchar](3000) NULL,
+	[TASK_STATUS_DESC] [varchar](50) NULL,
+	[TASK_DIRECTION] [varchar](50) NULL,
+	[TASK_DURATION] [int] NULL,
+	[TASK_END_DESC] [varchar](50) NULL,
+	[TASK_END_CAUSE_DESC] [varchar](50) NULL,
+	[ROUND_TRIP_TIME] [int] NULL,
+	[PING_SENT] [int] NULL,
+	[PING_RECEIVED] [int] NULL,
+	[PING_LOST] [int] NULL,
+	[TOTAL_BYTES_RECEIVED] [bigint] NULL,
+	[TOTAL_BYTES_SENT] [bigint] NULL,
+	[TASK_NETWORK_THP_DL] [numeric](12, 6) NULL,
+	[TASK_NETWORK_THP_UL] [numeric](10, 6) NULL,
+	[TIME_RECEIVED_MS] [int] NULL,
+	[TIME_SENT_MS] [int] NULL,
+	[PARALLEL_TASK] [varchar](10) NULL,
+	[PARALLEL_TASK_NUMBER] [int] NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[STG_EVDO_RxPOWER_DATA]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[STG_EVDO_RxPOWER_DATA]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[STG_EVDO_RxPOWER_DATA](
+	[DRIVE_ID] [int] NULL,
+	[SOURCE_FILE_NAME] [varchar](1000) NULL,
+	[RXPOWER_DATA_ID] [int] NULL,
+	[DEVICE_ID] [smallint] NULL,
+	[TASK_SEQ_ID] [int] NULL,
+	[CALL_ID] [int] NULL,
+	[TASK_ID] [smallint] NULL,
+	[TECHNOLOGY_MODE_DESC] [varchar](100) NULL,
+	[TASK_STATE_DESC] [varchar](100) NULL,
+	[LOCATION_ID] [int] NULL,
+	[GPS_TIME] [datetime] NULL,
+	[RX_AGC_ANTENNA_0] [numeric](9, 3) NULL,
+	[RX_AGC_ANTENNA_1] [numeric](9, 3) NULL,
+	[TX_PILOT_POWER] [numeric](9, 3) NULL,
+	[TX_TOTAL_POWER] [numeric](9, 3) NULL,
+	[TX_CLOSED_LOOP_POWER] [numeric](9, 3) NULL,
+	[PACKET_ERROR_RATE] [numeric](9, 2) NULL
+) ON [PRIMARY]
+END
+ 
+/****** Object:  Table [dbo].[STG_DRIVE_DEVICES]    Script Date: 05/09/2017 17:00:21 ******/
+ 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[STG_DRIVE_DEVICES]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[STG_DRIVE_DEVICES](
+	[DRIVE_ID] [int] NOT NULL,
+	[SOURCE_FILE_NAME] [varchar](1000) NOT NULL,
+	[DEVICE_ID] [smallint] NOT NULL,
+	[CARRIER_DEVICE_ID] [bigint] NOT NULL,
+	[DEVICE_MODEL_NUMBER] [varchar](100) NULL,
+	[DEVICE_TECHNOLOGY_NAME] [varchar](100) NULL,
+	[DEVICE_MANUFACTURER_NAME] [varchar](100) NULL,
+	[CHASSIS_MAC_ADDRESS] [varchar](100) NULL,
+	[DEVICE_MAC_ADDRESS] [varchar](100) NULL
+) ON [PRIMARY]
+END
+ 
+ 
+/****** Object:  Default [DF__METRIC_SA__METRI__62E4AA3C]    Script Date: 05/09/2017 17:00:21 ******/
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF__METRIC_SA__METRI__62E4AA3C]') AND parent_object_id = OBJECT_ID(N'[dbo].[METRIC_SAMPLE_COUNT]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF__METRIC_SA__METRI__62E4AA3C]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[METRIC_SAMPLE_COUNT] ADD  DEFAULT ((0)) FOR [METRIC_MIN_VALUE]
+END
+End
+ 
+/****** Object:  Default [DF__METRIC_SA__METRI__63D8CE75]    Script Date: 05/09/2017 17:00:21 ******/
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[dbo].[DF__METRIC_SA__METRI__63D8CE75]') AND parent_object_id = OBJECT_ID(N'[dbo].[METRIC_SAMPLE_COUNT]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF__METRIC_SA__METRI__63D8CE75]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[METRIC_SAMPLE_COUNT] ADD  DEFAULT ((0)) FOR [METRIC_MAX_VALUE]
+END
+End
+ 

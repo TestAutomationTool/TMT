@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MarketCarrier>
+	<Market ID="C1">		
+		<PORT>01</PORT>
+		<CARRIER_NAME>T-MOBILE</CARRIER_NAME>
+		<DEVICE_TECHNOLOGY_NAME>LTE CDMA</DEVICE_TECHNOLOGY_NAME>		
+		<SUPPORTED_TECHNOLOGY>LTE,UMTS,GSM</SUPPORTED_TECHNOLOGY>
+	</Market>
+</MarketCarrier>

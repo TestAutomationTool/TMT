@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EventDefinition>
+	<Event ID="1001">
+		<EventName>Call End</EventName>
+	</Event>
+	<Event ID="1002">
+		<EventName>Call End/Multi Session-End</EventName>
+	</Event>
+	<Event ID="1003">
+		<EventName>Call Start</EventName>
+	</Event>
+	<Event ID="1004">
+		<EventName>Idle Start</EventName>
+	</Event>
+	<Event ID="1005">
+		<EventName>Multi Session-End</EventName>
+	</Event>
+	<Event ID="1006">
+		<EventName>Release End</EventName>
+	</Event>
+	<Event ID="1007">
+		<EventName>Release Start</EventName>
+	</Event>
+	<Event ID="1008">
+		<EventName>Setup Start</EventName>
+	</Event>
+	<Event ID="1009">
+		<EventName>Success</EventName>
+	</Event>
+	<Event ID="1010">
+		<EventName>Success-Single Ping</EventName>
+	</Event>
+	<Event ID="1011">
+		<EventName>Traffic Setup Start</EventName>
+	</Event>
+	<Event ID="1012">
+		<EventName>Traffic Start</EventName>
+	</Event>
+</EventDefinition>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseStatus>
+	<Status>
+		<StatusID>0</StatusID>
+		<StatusComments>Not Executed</StatusComments>
+	</Status>
+	<Status>
+		<StatusID>1</StatusID>
+		<StatusComments>Passed</StatusComments>
+	</Status>
+	<Status>
+		<StatusID>2</StatusID>
+		<StatusComments>Failed</StatusComments>
+	</Status>
+	<Status>
+		<StatusID>3</StatusID>
+		<StatusComments>NA</StatusComments>
+	</Status>
+</TestCaseStatus>

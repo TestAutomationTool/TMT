@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EventStates>
+	<EventState>
+		<EventStateName>NA</EventStateName>
+		<EventStateId>00</EventStateId>
+	</EventState>
+	<EventState>
+		<EventStateName>IDLE START</EventStateName>
+		<EventStateId>01</EventStateId>
+	</EventState>
+	<EventState>
+		<EventStateName>CALL ATTEMPT</EventStateName>
+		<EventStateId>02</EventStateId>
+	</EventState>
+	<EventState>
+		<EventStateName>SETUP START</EventStateName>
+		<EventStateId>03</EventStateId>
+	</EventState>
+	<EventState>
+		<EventStateName>TRAFFIC START</EventStateName>
+		<EventStateId>04</EventStateId>
+	</EventState>
+	<EventState>
+		<EventStateName>CALLL ESTABLISHED</EventStateName>
+		<EventStateId>05</EventStateId>
+	</EventState>
+	<EventState>
+		<EventStateName>CCALLL TERMINATION</EventStateName>
+		<EventStateId>06</EventStateId>
+	</EventState>
+</EventStates>
